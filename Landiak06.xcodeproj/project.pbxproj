@@ -13,9 +13,12 @@
 		662C763825508E0800725BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662C763625508E0800725BB7 /* Main.storyboard */; };
 		662C763A25508E0B00725BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662C763925508E0B00725BB7 /* Assets.xcassets */; };
 		662C763D25508E0B00725BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662C763B25508E0B00725BB7 /* LaunchScreen.storyboard */; };
+		9AA0960C8FB2A314E8ED6617 /* Pods_Landiak06.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FDB3305F02FA9E60B35183 /* Pods_Landiak06.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25FDB3305F02FA9E60B35183 /* Pods_Landiak06.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Landiak06.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65EF285FDB507CAE35A8F73C /* Pods-Landiak06.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landiak06.debug.xcconfig"; path = "Target Support Files/Pods-Landiak06/Pods-Landiak06.debug.xcconfig"; sourceTree = "<group>"; };
 		662C762D25508E0800725BB7 /* Landiak06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landiak06.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		662C763025508E0800725BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		662C763225508E0800725BB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		662C763925508E0B00725BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662C763C25508E0B00725BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662C763E25508E0B00725BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7520D46EC5680677DC8232E0 /* Pods-Landiak06.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landiak06.release.xcconfig"; path = "Target Support Files/Pods-Landiak06/Pods-Landiak06.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA0960C8FB2A314E8ED6617 /* Pods_Landiak06.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B63CBBF341E4425228579F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25FDB3305F02FA9E60B35183 /* Pods_Landiak06.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		662C762425508E0800725BB7 = {
 			isa = PBXGroup;
 			children = (
 				662C762F25508E0800725BB7 /* Landiak06 */,
 				662C762E25508E0800725BB7 /* Products */,
+				8957A3E5D63183AB35BE2C91 /* Pods */,
+				4B63CBBF341E4425228579F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = Landiak06;
 			sourceTree = "<group>";
 		};
+		8957A3E5D63183AB35BE2C91 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65EF285FDB507CAE35A8F73C /* Pods-Landiak06.debug.xcconfig */,
+				7520D46EC5680677DC8232E0 /* Pods-Landiak06.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 662C764125508E0B00725BB7 /* Build configuration list for PBXNativeTarget "Landiak06" */;
 			buildPhases = (
+				000E85929ED3759A36FD3781 /* [CP] Check Pods Manifest.lock */,
 				662C762925508E0800725BB7 /* Sources */,
 				662C762A25508E0800725BB7 /* Frameworks */,
 				662C762B25508E0800725BB7 /* Resources */,
+				D559A965835713BF9F561CA6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		000E85929ED3759A36FD3781 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Landiak06-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D559A965835713BF9F561CA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Landiak06/Pods-Landiak06-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Landiak06/Pods-Landiak06-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Landiak06/Pods-Landiak06-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		662C762925508E0800725BB7 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		662C764225508E0B00725BB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65EF285FDB507CAE35A8F73C /* Pods-Landiak06.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		662C764325508E0B00725BB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7520D46EC5680677DC8232E0 /* Pods-Landiak06.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
