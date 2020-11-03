@@ -1,4 +1,4 @@
-
+import Foundation
 
 class httpService {
     func request(url:String, subreddit:[String] = [], subredditValues:[String:String] = [:]) {
@@ -21,7 +21,11 @@ class httpService {
                 {
                     
                     PersistenceManager.sharedInstance.add(root.data.children[0].data)
+                    
                     PersistenceManager.sharedInstance.printAll()
+                    
+                    NotificationCenter.default.post(Notification(name: notificationPost))
+                    
                 }
             } else {
                 print(error?.localizedDescription ?? "Error")

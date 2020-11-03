@@ -5,6 +5,6 @@ class UseCase {
         Repository().requestService()
     }
     func takeInformation() -> Array<Post?> {
-        Repository().getFromDB().description
+        Repository().getFromDB()
     }
 }

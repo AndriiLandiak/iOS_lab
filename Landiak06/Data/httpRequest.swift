@@ -1,3 +1,4 @@
+import Foundation
 
 struct Root: Codable {
     let data: RootData

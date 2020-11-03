@@ -76,28 +76,34 @@
                                                 <rect key="frame" x="0.0" y="255" width="284" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-oa-vTw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="35"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="y" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDN-KO-rYS">
-                                                        <rect key="frame" x="94.5" y="0.0" width="95" height="35"/>
+                                                        <rect key="frame" x="86" y="0.0" width="85.5" height="35"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="share" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb2-au-sly">
-                                                        <rect key="frame" x="189.5" y="0.0" width="94.5" height="35"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb2-au-sly">
+                                                        <rect key="frame" x="171.5" y="0.0" width="86" height="35"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0AP-cP-Cwo">
+                                                        <rect key="frame" x="257.5" y="0.0" width="26.5" height="35"/>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <constraints>
                                                     <constraint firstItem="Xb2-au-sly" firstAttribute="width" secondItem="ZYo-oa-vTw" secondAttribute="width" id="fsW-dt-346"/>
                                                     <constraint firstItem="ZYo-oa-vTw" firstAttribute="width" secondItem="kDN-KO-rYS" secondAttribute="width" id="g17-sE-k3R"/>
+                                                    <constraint firstItem="0AP-cP-Cwo" firstAttribute="width" secondItem="Xb2-au-sly" secondAttribute="width" multiplier="0.3" constant="1" id="hwQ-6t-VNg"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
@@ -151,6 +157,7 @@
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
