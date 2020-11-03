@@ -48,13 +48,14 @@ struct Post: Codable {
     let numComments: Int
     let ups: Int
     let downs: Int
+    var saved: Bool
     let thumbnail: String?
     
     
     var description: String {
         if let thumbnail = thumbnail {
             return """
-            Author: \(author), domain: \(domain), created: \(NSDate(timeIntervalSince1970: created)), title: \(title), numComments: \(numComments), ups: \(ups), downs: \(downs), thumbnail: \(thumbnail)
+            Author: \(author), domain: \(domain), created: \(NSDate(timeIntervalSince1970: created)), title: \(title), numComments: \(numComments), ups: \(ups), downs: \(downs), saved: \(false) thumbnail: \(thumbnail)
             """
         }
         return """
@@ -69,6 +70,7 @@ struct Post: Codable {
         case created
         case title
         case thumbnail
+        case saved
         case ups
         case downs
     }

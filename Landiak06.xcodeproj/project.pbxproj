@@ -13,6 +13,7 @@
 		662C763825508E0800725BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662C763625508E0800725BB7 /* Main.storyboard */; };
 		662C763A25508E0B00725BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662C763925508E0B00725BB7 /* Assets.xcassets */; };
 		662C763D25508E0B00725BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662C763B25508E0B00725BB7 /* LaunchScreen.storyboard */; };
+		6660F5BD2551AD9000D469FC /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6660F5BC2551AD9000D469FC /* PostViewModel.swift */; };
 		66AF22CA2551609E00C3323D /* httpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C52551609E00C3323D /* httpRequest.swift */; };
 		66AF22CB2551609E00C3323D /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C62551609E00C3323D /* PersistenceManager.swift */; };
 		66AF22CC2551609E00C3323D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C72551609E00C3323D /* Repository.swift */; };
@@ -32,6 +33,7 @@
 		662C763925508E0B00725BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662C763C25508E0B00725BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662C763E25508E0B00725BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6660F5BC2551AD9000D469FC /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		66AF22C52551609E00C3323D /* httpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpRequest.swift; sourceTree = "<group>"; };
 		66AF22C62551609E00C3323D /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		66AF22C72551609E00C3323D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				662C763925508E0B00725BB7 /* Assets.xcassets */,
 				662C763B25508E0B00725BB7 /* LaunchScreen.storyboard */,
 				662C763E25508E0B00725BB7 /* Info.plist */,
+				6660F5BC2551AD9000D469FC /* PostViewModel.swift */,
 			);
 			path = Landiak06;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				662C763125508E0800725BB7 /* AppDelegate.swift in Sources */,
 				66AF22CD2551609E00C3323D /* UseCase.swift in Sources */,
 				66AF22CE2551609E00C3323D /* httpService.swift in Sources */,
+				6660F5BD2551AD9000D469FC /* PostViewModel.swift in Sources */,
 				662C763325508E0800725BB7 /* SceneDelegate.swift in Sources */,
 				66AF22CC2551609E00C3323D /* Repository.swift in Sources */,
 			);

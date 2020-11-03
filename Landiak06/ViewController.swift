@@ -9,37 +9,9 @@ let notificationPost = Notification.Name("testing")
 
 import UIKit
 
-//protocol Observer: class {
-//    func update(subject: NotifCenter)
-//}
-//
-//class NotifCenter {
-//    var state: Array<Post?> = []
-//    
-//    private lazy var observers = [Observer]()
-//    
-//    func add(_ observer: Observer) {
-//        observers.append(observer)
-//    }
-//    func remove(_ observer: Observer) {
-//        if let index = observers.firstIndex(where: {$0 === observer}) {
-//            observers.remove(at: index)
-//        }
-//    }
-//    func notify() {
-//        observers.forEach({$0.update(subject: self)})
-//    }
-//    
-//    func logic() {
-//        let s = UseCase()
-//        s.requestRepository()
-//        state = s.takeInformation()
-//    }
-//}
-
 class ViewController: UIViewController {
-
-//    let notificationCetner = NotifCenter()
+    
+    var saved = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,23 +22,7 @@ class ViewController: UIViewController {
         UseCase().requestRepository()
     
     }
-    let main = DispatchQueue.main
 
-        // Do any additional setup after loading the view.
-//        let s = UseCase()
-//        s.requestRepository()
-//        sleep(3)
-//        let check = s.takeInformation()
-//        self.usernameLabel.text = check[0]?.author
-//        self.titleLabel.text = check[0]?.title
-//    func update(subject: NotifCenter) {
-//        self.usernameLabel.text =         notificationCetner.state[0]?.author
-//        self.timeLabel.text = ""
-//        self.domainLabel.text =         notificationCetner.state[0]?.domain
-//        self.titleLabel.text = notificationCetner.state[0]?.title
-////        ratingLabel.text = (notificationCetner.state[0]!.ups - notificationCetner.state[0]!.downs)
-////        commentsNumLabel.text = notificationCetner.state[0]?.numComments
-//    }
     @objc
     func updatePostNotification() {
         updatePost()
@@ -76,56 +32,25 @@ class ViewController: UIViewController {
         let use = UseCase()
         use.requestRepository()
         let post = use.takeInformation()
-        
-//        var timeInterval = ""
-//        var timeStr = ""
-//        timeInterval = -timeInterval
-//        if(timeInterval < 60){
-//            timeStr = "\(Int(timeInterval)) sec"
-//        } else if(timeInterval < 3600){
-//            timeStr = "\(Int(timeInterval/60)) min"
-//        }  else if(timeInterval < (3600 * 24)){
-//            timeStr = "\(Int(timeInterval/3600)) hour"
-//        } else if(timeInterval < (3600  * 24*7)){
-//            timeStr = "\(Int(timeInterval/3600/24)) days"
-//        } else if(timeInterval < (2592000)){
-//            timeStr = "\(Int(timeInterval/3600/24/7)) weeks"
-//        } else if(timeInterval < (31556926)){
-//            timeStr = "\(Int(timeInterval/3600/24/7/4)) months"
-//        } else {
-//            timeStr = "\(Int(timeInterval/3600/24/7/4/12)) years"
-//        }
-        
-        func stringFromTimeInterval(interval:TimeInterval) -> String {
-
-            let ti = NSInteger(interval)
-            let ms = ti * 1000
-            let seconds = ti % 60
-            let minutes = (ti / 60) % 60
-            let hours = (ti / 3600)
-
-            return String(format: "%0.2d:%0.2d:%0.2d",hours,minutes,seconds,ms)
+        let postViewModel = PSM(post[0])
+        DispatchQueue.main.async {
+            self.usernameLabel.text = postViewModel.author
+            self.titleLabel.text = postViewModel.title
+            self.timeLabel.text = postViewModel.time
+            self.ratingLabel.text = postViewModel.rating
+            self.commentsNumLabel.text = postViewModel.numComments
+            self.domainLabel.text = postViewModel.domain
+            self.imageURL.image = postViewModel.photo
         }
-        
-    
-        main.async {
-            self.usernameLabel.text = post[0]?.author
-            self.titleLabel.text = post[0]?.title
-            self.timeLabel.text = stringFromTimeInterval(interval: post[0]!.created)
-            self.ratingLabel.text = String((post[0]?.ups ?? 0) - (post[0]?.downs ?? 0))
-            self.commentsNumLabel.text = String(post[0]?.numComments ?? 0)
-            self.domainLabel.text = post[0]?.domain
-        }
-        
-       
     }
 
+    @IBOutlet private weak var markBut: UIButton!
     
-    @IBOutlet weak var buttonName: UIButton!
-    
-//    @IBAction func savedButton(_ sender: Any) {
-//        buttonName.isSelected = !buttonName.isSelected
-//    }
+    @IBAction func buttonMark(_ sender: Any) {
+        markBut.isSelected = !markBut.isSelected
+        saved = !saved
+        
+    }
     
     
     @IBOutlet private weak var imageURL: UIImageView!
