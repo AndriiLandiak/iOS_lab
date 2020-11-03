@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		662C763825508E0800725BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662C763625508E0800725BB7 /* Main.storyboard */; };
 		662C763A25508E0B00725BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 662C763925508E0B00725BB7 /* Assets.xcassets */; };
 		662C763D25508E0B00725BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 662C763B25508E0B00725BB7 /* LaunchScreen.storyboard */; };
+		66AF22CA2551609E00C3323D /* httpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C52551609E00C3323D /* httpRequest.swift */; };
+		66AF22CB2551609E00C3323D /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C62551609E00C3323D /* PersistenceManager.swift */; };
+		66AF22CC2551609E00C3323D /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C72551609E00C3323D /* Repository.swift */; };
+		66AF22CD2551609E00C3323D /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C82551609E00C3323D /* UseCase.swift */; };
+		66AF22CE2551609E00C3323D /* httpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF22C92551609E00C3323D /* httpService.swift */; };
 		9AA0960C8FB2A314E8ED6617 /* Pods_Landiak06.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FDB3305F02FA9E60B35183 /* Pods_Landiak06.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,11 @@
 		662C763925508E0B00725BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		662C763C25508E0B00725BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		662C763E25508E0B00725BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66AF22C52551609E00C3323D /* httpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpRequest.swift; sourceTree = "<group>"; };
+		66AF22C62551609E00C3323D /* PersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		66AF22C72551609E00C3323D /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		66AF22C82551609E00C3323D /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		66AF22C92551609E00C3323D /* httpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpService.swift; sourceTree = "<group>"; };
 		7520D46EC5680677DC8232E0 /* Pods-Landiak06.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Landiak06.release.xcconfig"; path = "Target Support Files/Pods-Landiak06/Pods-Landiak06.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +81,8 @@
 		662C762F25508E0800725BB7 /* Landiak06 */ = {
 			isa = PBXGroup;
 			children = (
+				66AF22D0255160AC00C3323D /* Domain */,
+				66AF22C42551609E00C3323D /* Data */,
 				662C763025508E0800725BB7 /* AppDelegate.swift */,
 				662C763225508E0800725BB7 /* SceneDelegate.swift */,
 				662C763425508E0800725BB7 /* ViewController.swift */,
@@ -82,13 +94,31 @@
 			path = Landiak06;
 			sourceTree = "<group>";
 		};
+		66AF22C42551609E00C3323D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				66AF22C52551609E00C3323D /* httpRequest.swift */,
+				66AF22C62551609E00C3323D /* PersistenceManager.swift */,
+				66AF22C72551609E00C3323D /* Repository.swift */,
+				66AF22C82551609E00C3323D /* UseCase.swift */,
+				66AF22C92551609E00C3323D /* httpService.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		66AF22D0255160AC00C3323D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		8957A3E5D63183AB35BE2C91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				65EF285FDB507CAE35A8F73C /* Pods-Landiak06.debug.xcconfig */,
 				7520D46EC5680677DC8232E0 /* Pods-Landiak06.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,8 +237,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				662C763525508E0800725BB7 /* ViewController.swift in Sources */,
+				66AF22CB2551609E00C3323D /* PersistenceManager.swift in Sources */,
+				66AF22CA2551609E00C3323D /* httpRequest.swift in Sources */,
 				662C763125508E0800725BB7 /* AppDelegate.swift in Sources */,
+				66AF22CD2551609E00C3323D /* UseCase.swift in Sources */,
+				66AF22CE2551609E00C3323D /* httpService.swift in Sources */,
 				662C763325508E0800725BB7 /* SceneDelegate.swift in Sources */,
+				66AF22CC2551609E00C3323D /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,6 +48,10 @@
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" image="bookmark" catalog="system"/>
                                                         <state key="selected" image="bookmark.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="savedButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="vDX-Ot-1le"/>
+                                                            <action selector="savedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vAF-dN-QMe"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -127,6 +131,17 @@
                             <constraint firstItem="Efb-jl-buB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="acd-qN-I0z"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonName" destination="9mP-Y0-ljL" id="XIY-D8-Rxu"/>
+                        <outlet property="commentsNumLabel" destination="kDN-KO-rYS" id="H4R-LG-UWf"/>
+                        <outlet property="domainLabel" destination="W3q-74-n2C" id="Q2L-4D-wKA"/>
+                        <outlet property="imageURL" destination="7LI-o2-4cW" id="VZJ-eh-RGm"/>
+                        <outlet property="ratingLabel" destination="ZYo-oa-vTw" id="aJw-5z-NCC"/>
+                        <outlet property="shareLabel" destination="Xb2-au-sly" id="Tt1-dr-jjo"/>
+                        <outlet property="timeLabel" destination="QAG-zc-qgb" id="W4P-Yn-r8U"/>
+                        <outlet property="titleLabel" destination="LWA-pf-1A3" id="PoZ-jh-LwO"/>
+                        <outlet property="usernameLabel" destination="OKz-eX-0ca" id="2Ua-3t-hSM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
