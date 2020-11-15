@@ -19,13 +19,12 @@ class httpService {
             if let data = data {
                 if let root:Root = try? JSONDecoder().decode(Root.self, from: data)
                 {
-                    
-                    PersistenceManager.sharedInstance.add(root.data.children[0].data)
-                    
-                    PersistenceManager.sharedInstance.printAll()
-                    
+
+                    for el in root.data.children {
+                        PersistenceManager.sharedInstance.add(DataPost(el.data))
+                    }
+                
                     NotificationCenter.default.post(Notification(name: notificationPost))
-                    
                 }
             } else {
                 print(error?.localizedDescription ?? "Error")
